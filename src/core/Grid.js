@@ -52,16 +52,33 @@ Grid.prototype._buildNodes = function(width, height, matrix) {
         return nodes;
     }
 
-    if (matrix.length !== height || matrix[0].length !== width) {
-        throw new Error('Matrix size does not fit');
+    if(typeof Uint8Array !== 'undefined' && matrix.constructor === Uint8Array) {
+        if (matrix.length !== (height * width)) {
+            throw new Error('Matrix size does not fit');
+        }
+        
+        for (i = 0; i < height; ++i) {
+            for (j = 0; j < width; ++j) {
+                if (matrix[i*width + j]) {
+                    // 0, false, null will be walkable
+                    // while others will be un-walkable
+                    nodes[i][j].walkable = false;
+                }
+            }
+        }
     }
+    else {
+        if (matrix.length !== height || matrix[0].length !== width) {
+            throw new Error('Matrix size does not fit');
+        }
 
-    for (i = 0; i < height; ++i) {
-        for (j = 0; j < width; ++j) {
-            if (matrix[i][j]) {
-                // 0, false, null will be walkable
-                // while others will be un-walkable
-                nodes[i][j].walkable = false;
+        for (i = 0; i < height; ++i) {
+            for (j = 0; j < width; ++j) {
+                if (matrix[i][j]) {
+                    // 0, false, null will be walkable
+                    // while others will be un-walkable
+                    nodes[i][j].walkable = false;
+                }
             }
         }
     }
