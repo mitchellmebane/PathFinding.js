@@ -36,5 +36,5 @@ function build(dest, options) {
     });
 }
 
-build(__dirname + '/../lib/pathfinding-browser.js');
-build(__dirname + '/../lib/pathfinding-browser.min.js', { minify: true });
+build(__dirname + '/../pathfinding-browser.js');
+build(__dirname + '/../pathfinding-browser.min.js', { minify: true });

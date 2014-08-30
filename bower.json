@@ -1,28 +1,36 @@
 {
-  "name": "PathFinding.js",
-  "main": "./pathfinding-browser.min.js",
-  "version": "0.4.12",
-  "homepage": "http://qiao.github.io/PathFinding.js/visual/",
-  "authors": [
-    "Xueqiao Xu xueqiaoxu@gmail.com"
-  ],
-  "description": "A comprehensive path-finding library for grid based games",
-  "keywords": [
-    "path-finding",
-    "path",
-    "game",
-    "pathfinding",
-    "AStar",
-    "BreadthFirst",
-    "Dijkstra",
-    "JumpPoint"
-  ],
-  "license": "MIT",
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ]
+    "name": "PathFinding.js-mm",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/mitchellmebane/PathFinding.js.git"
+    },
+    "main": "pathfinding-browser.js",
+    "version": "0.4.12+mm.1",
+    "authors": [
+        "Xueqiao Xu xueqiaoxu@gmail.com",
+        "Mitchell Mebane mitchell.mebane@gmail.com"
+    ],
+    "description": "A comprehensive path-finding library for grid based games",
+    "keywords": [
+        "path-finding",
+        "path",
+        "game",
+        "pathfinding",
+        "AStar",
+        "BreadthFirst",
+        "Dijkstra",
+        "JumpPoint"
+    ],
+    "license": "MIT",
+    "ignore": [
+        "**/.*",
+        "Makefile",
+        "index.js",
+        "node_modules",
+        "bower_components",
+        "benchmark",
+        "src",
+        "test",
+        "utils"
+    ]
 }
